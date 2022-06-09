@@ -7,12 +7,15 @@ body {
   justify-content: center;
 }
 
+/*Attractive gradients*/
+/* linear-gradient(#1e3c72, #2a5298); */
+/* linear-gradient(#6dd5fa, #2980b9); */
 .breath-circle {
   align-self: center;
   height: 250px;
   width: 250px;
   border-radius: 50%;
-  /* background: linear-gradient(#1e3c72, #2a5298); */
+  background: linear-gradient(#6dd5fa, #2980b9);
   animation-name: breath;
 
   animation: breath 7s ease 0s infinite;
@@ -46,11 +49,11 @@ body {
 }
 .left-ring {
   top: 120px;
-  left: -6px;
+  left: -3px;
 }
 .right-ring {
   top: 120px;
-  left: 246px;
+  left: 248px;
 }
 
 .circle-outline::before {
