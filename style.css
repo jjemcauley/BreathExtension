@@ -7,4 +7,31 @@ body {
     rgb(248, 249, 191),
     rgb(254, 255, 171)
   );
+  display: flex;
+  justify-content: center;
+}
+
+.breath-circle {
+  align-self: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: aqua;
+  animation-name: breath;
+  animation: breath 10s ease 0s infinite;
+}
+
+.active-text {
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
