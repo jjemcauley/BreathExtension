@@ -1,0 +1,10 @@
+body {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    45deg,
+    rgb(254, 255, 171),
+    rgb(248, 249, 191),
+    rgb(254, 255, 171)
+  );
+}
