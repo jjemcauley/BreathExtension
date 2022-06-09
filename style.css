@@ -1,37 +1,93 @@
 body {
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(
-    45deg,
-    rgb(254, 255, 171),
-    rgb(248, 249, 191),
-    rgb(254, 255, 171)
-  );
+  width: 550px;
+  height: 550px;
+  /* background: linear-gradient(45deg, #4ca1af, #c4e0e5); */
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
 }
 
 .breath-circle {
   align-self: center;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   border-radius: 50%;
-  background-color: aqua;
+  /* background: linear-gradient(#1e3c72, #2a5298); */
   animation-name: breath;
-  animation: breath 10s ease 0s infinite;
+
+  animation: breath 7s ease 0s infinite;
+}
+.background {
+  top: 0px;
+  height: 650px;
+  width: 650px;
+  display: inline-block;
+  position: absolute;
+  background-image: url("images/sea.jpg");
+  background-size: 1000px 1000px;
+  filter: blur(2px);
 }
 
-.active-text {
+.circle-outline {
+  display: inline-block;
+  position: absolute;
+  animation: none;
+  transform: scale(2);
+  background: none;
+  border: rgba(255, 255, 255, 0.803) solid 1px;
+}
+
+.ring {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.left-ring {
+  top: 120px;
+  left: -6px;
+}
+.right-ring {
+  top: 120px;
+  left: 246px;
+}
+
+.circle-outline::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  animation: moveAround 7s linear infinite;
+}
+
+@keyframes moveAround {
+  0% {
+    transform: rotate(0deg) translate(126px);
+  }
+  100% {
+    transform: rotate(360deg) translate(126px);
+  }
 }
 
 @keyframes breath {
   0% {
     transform: scale(1);
+    background-color: #0977b6;
   }
   50% {
-    transform: scale(3);
+    transform: scale(2);
+    background-color: #1488cc;
   }
   100% {
     transform: scale(1);
+    background-color: #0977b6;
   }
 }
