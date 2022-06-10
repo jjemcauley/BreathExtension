@@ -7,6 +7,7 @@ body {
   justify-content: center;
 }
 
+
 /*Attractive gradients*/
 /* linear-gradient(#1e3c72, #2a5298); */
 /* linear-gradient(#6dd5fa, #2980b9); */
@@ -26,11 +27,14 @@ body {
   width: 650px;
   display: inline-block;
   position: absolute;
-  background-image: url("images/sea.jpg");
+  background-image: url("images/Mountains.jpg");
   background-size: 1000px 1000px;
   filter: blur(2px);
 }
-
+.picture{
+  width: 25px;
+  height: 25px;
+}
 .circle-outline {
   display: inline-block;
   position: absolute;
@@ -39,7 +43,6 @@ body {
   background: none;
   border: rgba(255, 255, 255, 0.803) solid 1px;
 }
-
 .ring {
   height: 5px;
   width: 5px;
@@ -55,7 +58,18 @@ body {
   top: 120px;
   left: 248px;
 }
-
+.active-text::before{
+  display: block;
+  position: relative;
+  top: 90px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  font-family: Poppins, 'Times New Roman', Times, serif;
+  content: "";
+  animation: text 7s linear infinite;
+  font-size: 24px;
+}
 .circle-outline::before {
   content: "";
   width: 5px;
@@ -77,6 +91,15 @@ body {
   }
   100% {
     transform: rotate(360deg) translate(126px);
+  }
+}
+@keyframes text{
+  0%{
+    content: "Breath in";
+  }
+  
+  100%{
+    content: "Breath out";
   }
 }
 
